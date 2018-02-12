@@ -1,0 +1,128 @@
+@charset "utf-8";
+
+ul#navmenu__vertical,
+ul#navmenu__vertical li,
+ul#navmenu__vertical ul {
+	margin: 0;
+	border: 0 none;
+	padding: 0;
+	width: 260px; 
+	list-style: none;
+	}
+
+ul#navmenu__vertical:after {
+	clear: both;
+	display: block;
+	font: 1px/0px serif;
+	content: ".";
+	height: 0;
+	visibility: hidden;
+	}
+
+ul#navmenu__vertical li {
+	float: left; 
+	display: block !important;
+	display: inline; 
+	position: relative;
+	}
+
+/* Root Menu */
+ul#navmenu__vertical a {
+	border: 1px solid #FFF;
+	border-right-color: #CCC;
+	border-bottom-color: #CCC;
+	padding: 10px 8px;
+	display: block;
+	background: #EEE;
+	color: #333;
+	font-family: Helvetica, sans-serif;
+    font-size:14px;
+	text-decoration: none;
+	height: auto !important;
+	height: 1%; 
+    -webkit-transition: all 0.4s ease-out;
+-moz-transition: all 0.4s ease-out;
+-ms-transition: all 0.4s ease-out;
+-o-transition: all 0.4s ease-out;
+transition: all 0.4s ease-out;
+	}
+
+/* Root Menu Hover Persistence */
+ul#navmenu__vertical a:hover,
+ul#navmenu__vertical li:hover a,
+ul#navmenu__vertical li.iehover a {
+	background: #f1f1f1;
+	color: #111;
+	}
+
+/* 2nd Menu */
+ul#navmenu__vertical li:hover li a,
+ul#navmenu__vertical li.iehover li a {
+	background: #f1f1f1;
+	color: #111;
+	}
+
+/* 2nd Menu Hover Persistence */
+ul#navmenu__vertical li:hover li a:hover,
+ul#navmenu__vertical li:hover li:hover a,
+ul#navmenu__vertical li.iehover li a:hover,
+ul#navmenu__vertical li.iehover li.iehover a {
+	background: #f1f1f1;
+	color: #111;
+	}
+
+/* 3rd Menu */
+ul#navmenu__vertical li:hover li:hover li a,
+ul#navmenu__vertical li.iehover li.iehover li a {
+	background: #f1f1f1;
+	color: #111;
+	}
+
+/* 3rd Menu Hover Persistence */
+ul#navmenu__vertical li:hover li:hover li a:hover,
+ul#navmenu__vertical li:hover li:hover li:hover a,
+ul#navmenu__vertical li.iehover li.iehover li a:hover,
+ul#navmenu__vertical li.iehover li.iehover li.iehover a {
+	background: #CCC;
+	color: #FFF;
+	}
+
+/* 4th Menu */
+ul#navmenu__vertical li:hover li:hover li:hover li a,
+ul#navmenu__vertical li.iehover li.iehover li.iehover li a {
+	background: #EEE;
+	color: #444;
+	}
+
+/* 4th Menu Hover */
+ul#navmenu__vertical li:hover li:hover li:hover li a:hover,
+ul#navmenu__vertical li.iehover li.iehover li.iehover li a:hover {
+	background: #CCC;
+	color: #FFF;
+	}
+
+ul#navmenu__vertical ul,
+ul#navmenu__vertical ul ul,
+ul#navmenu__vertical ul ul ul {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 260px;
+}
+
+/* Do Not Move - Must Come Before display:block for Gecko */
+ul#navmenu__vertical li:hover ul ul,
+ul#navmenu__vertical li:hover ul ul ul,
+ul#navmenu__vertical li.iehover ul ul,
+ul#navmenu__vertical li.iehover ul ul ul {
+	display: none;
+	}
+
+ul#navmenu__vertical li:hover ul,
+ul#navmenu__vertical ul li:hover ul,
+ul#navmenu__vertical ul ul li:hover ul,
+ul#navmenu__vertical li.iehover ul,
+ul#navmenu__vertical ul li.iehover ul,
+ul#navmenu__vertical ul ul li.iehover ul {
+	display: block;
+	}
